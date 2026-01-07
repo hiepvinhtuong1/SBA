@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/css/login.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>ACCOUNT LOGIN</h2>
+        <hr>
+
+        <form action="../views/index.html" method="post">
+            <div class="label">
+                <label for="userName">User Name</label>
+            </div>
+            <div class="input-data">
+                <input type="text" id="userName" name="userName" class="text-active" placeholder="User name">
+            </div>
+            <div class="label">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-data">
+                <input type="password" id="password" name="password" class="text-active" placeholder="Password">
+            </div>
+
+            <div class="login-left">
+                <input type="checkbox" name="rememberMe" id="rememberMe" checked> Remember me
+            </div>
+
+            <div class="login-right">
+                <a href="http://">Forgot password?</a>
+            </div>
+
+            <div class="btn-active">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

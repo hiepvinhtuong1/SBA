@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Dashboard - SB Admin</title>
+
+		<link href="../resources/css/styles-admin.css" rel="stylesheet" />
+		<link
+			href="../resources/vendors/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<script
+			src="../resources/vendors/jquery/jquery-3.2.1.min.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body class="sb-nav-fixed">
+		<!-- Header -->
+
+		<div id="layoutSidenav">
+			<!-- Sidenav -->
+			<div id="layoutSidenav_content">
+				<div class="px-4">
+					<h1 class="mt-4">PRODUCT DETAIL</h1>
+					<hr />
+					<div class="card mb-4">
+						<div class="card-header" style="font-style: italic">
+							Create/Update a new/existing product
+						</div>
+						<div class="card-body">
+							<form id="form-p" method="post">
+								<div class="form-group">
+									<label for="productId">Product Code</label>
+									<input
+										type="text"
+										class="form-control"
+										id="productCode"
+										name="productCode"
+										placeholder="Product code"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="productName">
+										Product Name
+									</label>
+									<input
+										type="text"
+										class="form-control"
+										id="productName"
+										name="productName"
+										placeholder="Product name"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="standardCost">
+										Standard Cost
+									</label>
+									<input
+										type="number"
+										class="form-control"
+										id="standardCost"
+										name="standardCost"
+										placeholder="Standard Cost"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="listPrice">List Price</label>
+									<input
+										type="number"
+										class="form-control"
+										id="listPrice"
+										name="listPrice"
+										placeholder="List Price"
+									/>
+								</div>
+
+								<div class="form-group">
+									<label for="category">Category</label>
+									<select
+										class="form-control"
+										id="category"
+										name="category"
+									>
+										<option value="">
+											-- Chọn danh mục --
+										</option>
+										<option value="Electronic">
+											Điện tử
+										</option>
+										<option value="Furniture">
+											Nội thất
+										</option>
+										<option value="Fashion">
+											Thời trang
+										</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="descriptions">
+										Descriptions
+									</label>
+									<textarea
+										class="form-control"
+										id="descriptions"
+										name="descriptions"
+										rows="3"
+									></textarea>
+								</div>
+
+								<button
+									type="submit"
+									class="btn btn-primary"
+									id="btn-pr-save"
+									value="save"
+								>
+									Save
+								</button>
+								<a type="button" class="btn btn-warning">
+									Discard
+								</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="table-responsive layoutSidenav_content">
+					<table class="table table-primary">
+						<thead>
+							<tr>
+								<th scope="col">Product Code</th>
+								<th scope="col">Product Name</th>
+								<th scope="col">Standard Cost</th>
+								<th scope="col">List Price</th>
+								<th scope="col">Category</th>
+								<th scope="col">Descriptions</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody"></tbody>
+					</table>
+				</div>
+
+				<footer class="py-4 bg-light mt-auto">
+					<div class="container-fluid px-4">
+						<div
+							class="d-flex align-items-center justify-content-between small"
+						>
+							<div class="text-muted">
+								Copyright &copy; Your Website 2023
+							</div>
+							<div>
+								<a href="#">Privacy Policy</a>
+								&middot;
+								<a href="#">Terms &amp; Conditions</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script>
+			let productList = [];
+			const form = document.getElementById("form-p");
+			const tableBody = document.getElementById("tableBody");
+
+			let index = 1;
+
+			form.addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				// lấy dữ liệu từ input
+				const productCode = document
+					.getElementById("productCode")
+					.value.trim();
+
+				const productName = document
+					.getElementById("productName")
+					.value.trim();
+
+				const standardCost = document
+					.getElementById("standardCost")
+					.value.trim();
+
+				const listPrice = document
+					.getElementById("listPrice")
+					.value.trim();
+
+				const category = document
+					.getElementById("category")
+					.value.trim();
+
+				const descriptions = document
+					.getElementById("descriptions")
+					.value.trim();
+
+				if (
+					!productCode ||
+					!productName ||
+					!standardCost ||
+					!category ||
+					!listPrice ||
+					!descriptions
+				) {
+					alert("Vui lòng nhập đầy đủ thông tin");
+					form.reset();
+					return;
+				}
+
+				const isDuplicate = productList.some(
+					(product) =>
+						product.code === productCode ||
+						product.name === productName
+				);
+
+				if (isDuplicate) {
+					alert("Mã sản phẩm hoặc tên sản phẩm đã tồn tại!");
+					form.reset();
+					return;
+				}
+
+				productList.push({
+					code: productCode,
+					name: productName,
+				});
+
+				const tr = document.createElement("tr");
+				const data = [
+					productCode,
+					productName,
+					standardCost,
+					listPrice,
+					category,
+					descriptions,
+				];
+				data.forEach((text) => {
+					const td = document.createElement("td");
+					td.textContent = text;
+					tr.appendChild(td);
+				});
+				tableBody.appendChild(tr);
+				form.reset();
+			});
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="../resources/js/scripts-admin.js"></script>
+		<script src="../resources/js/product.js"></script>
+	</body>
+</html>

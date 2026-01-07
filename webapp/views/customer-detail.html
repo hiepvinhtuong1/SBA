@@ -1,0 +1,87 @@
+
+<link rel="stylesheet" href="../resources/css/customer.css">
+
+<script src="../resources/vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<div class="container-fluid">
+
+    <h2>CUSTOMER DETAILS</h2>
+
+    <hr>
+    <form action="" method="post" id="customer-form-active">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <a href="#" id="add-new-phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
+                            <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                        </svg>
+                    </a>
+                    <input type="text" class="form-control phone" id="phone" name="phone" placeholder="(+84)999-9999">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="creditLimit">Credit Limit</label>
+                    <input type="number" class="form-control" id="creditLimit" name="creditLimit"
+                        placeholder="Credit Limit">
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="text" class="form-control" id="website" name="website"
+                        placeholder="fa-training.edu.vn">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-success btn-active-create">Create</button>
+        <button type="reset" class="btn btn-warning">Clear</button>
+    </form>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Credit Limit</th>
+                <th scope="col">Website</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-info btn-active-save">Save</button>
+    <button type="button" class="btn btn-danger btn-active-cancel">Danger</button>
+</div>
+
+<script src="../resources/js/customer.js"></script>

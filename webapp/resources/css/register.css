@@ -1,0 +1,54 @@
+body {
+    background-color:  #ccf5ff;
+}
+
+.my-register {
+    margin: 100px auto;
+    height: auto;
+    border: 1px solid tan;
+    border-top: 10px solid #00b8e6;
+    border-radius: 3px;
+    background-color: white;
+
+}
+
+.form-row, .custom-control-inline, .btn-my-active {
+    margin-top: 16px;
+}
+
+.btn-my-active {
+    width: 100%;
+    background-color: #00b8e6;
+    margin-bottom: 30px;
+}
+
+.my-register label:nth-child(1) {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+    color: #00b8e6;
+
+}
+
+.my-register input, .custom-control-label, .form-check-label {
+    font-size: 12px;
+}
+
+select option::target-text {
+    font-size: 12px;
+}
+
+select, optgroup {
+    font-size: 12px;
+}
+
+
+.form-control-error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    text-indent: 5px;
+    font-size: 12px;
+}
