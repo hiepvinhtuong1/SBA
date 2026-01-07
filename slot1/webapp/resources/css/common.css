@@ -1,0 +1,19 @@
+
+a:link {
+    text-decoration: none;
+    color: #00ccff;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 17px;
+} 
+
+ a:active {
+    color: violet;
+    font-size: 17px;
+}
+
+a:visited {
+    color: violet;
+}
