@@ -14,6 +14,7 @@ function App() {
 		<>
 			<Navbar expand="lg" className="bg-body-tertiary">
 				<div
+					className="d-flex justify-content-between"
 					style={{
 						width: "80%",
 						margin: "auto",
@@ -65,6 +66,7 @@ function App() {
 									<Button
 										variant="primary"
 										className="mt-auto"
+										style={{ width: "120px" }}
 									>
 										Detail
 									</Button>
