@@ -1,0 +1,247 @@
+{
+  "systemAccounts": [
+    {
+      "id": "1",
+      "AccountName": "Administrator",
+      "AccountEmail": "admin@funews.com",
+      "AccountRole": 1,
+      "AccountPassword": "Admin"
+    },
+    {
+      "id": "2",
+      "AccountName": "Nguyen Van Staff",
+      "AccountEmail": "staff1@funews.com",
+      "AccountRole": 2,
+      "AccountPassword": "123"
+    },
+    {
+      "id": "3",
+      "AccountName": "Tran Thi Staff",
+      "AccountEmail": "staff2@funews.com",
+      "AccountRole": 2,
+      "AccountPassword": "123"
+    },
+    {
+      "id": "4",
+      "AccountName": "Le Hoang Staff",
+      "AccountEmail": "staff3@funews.com",
+      "AccountRole": 2,
+      "AccountPassword": "123"
+    }
+  ],
+  "categories": [
+    {
+      "CategoryName": "Academic",
+      "CategoryDescription": "University academic news and policies",
+      "ParentCategoryID": "2",
+      "isActive": 1,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "CategoryName": "Sports",
+      "CategoryDescription": "Campus sports events and tournaments",
+      "ParentCategoryID": null,
+      "IsActive": 1
+    },
+    {
+      "id": "3",
+      "CategoryName": "Technology",
+      "CategoryDescription": "Latest tech trends in education",
+      "ParentCategoryID": null,
+      "IsActive": 1
+    },
+    {
+      "id": "4",
+      "CategoryName": "Life Style",
+      "CategoryDescription": "Student life and extracurricular activities",
+      "ParentCategoryID": null,
+      "IsActive": 1
+    },
+    {
+      "id": "5",
+      "CategoryName": "Scholarships",
+      "CategoryDescription": "Funding and scholarship opportunities",
+      "ParentCategoryID": "1",
+      "IsActive": 1
+    },
+    {
+      "id": "6",
+      "CategoryName": "Archived News",
+      "CategoryDescription": "Old news stories",
+      "ParentCategoryID": null,
+      "IsActive": 0
+    }
+  ],
+  "newsArticles": [
+    {
+      "NewsTitle": "New Semester Kickoff 2024",
+      "Headline": "Welcome students back to campus after the spring break",
+      "NewsContent": "The university is excited to welcome all students back for the new semester...",
+      "NewsSource": "University Office",
+      "CategoryID": "1",
+      "NewsStatus": 1,
+      "CreatedByID": "1",
+      "UpdatedByID": "1",
+      "CreatedDate": "2024-03-22",
+      "ModifiedDate": "2026-02-04",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "NewsTitle": "Tech Workshop: AI in Education",
+      "Headline": "Exploring how AI is transforming learning environments",
+      "CreatedDate": "2024-03-22",
+      "NewsContent": "Join us this Friday for a deep dive into AI tools for students...",
+      "NewsSource": "IT Department",
+      "CategoryID": "3",
+      "NewsStatus": 1,
+      "CreatedByID": "3",
+      "UpdatedByID": "3",
+      "ModifiedDate": "2024-03-22"
+    },
+    {
+      "id": "3",
+      "NewsTitle": "Annual Football Championship",
+      "Headline": "Registration is now open for the campus football league",
+      "CreatedDate": "2024-03-25",
+      "NewsContent": "Get your teams ready for the most anticipated sports event of the year...",
+      "NewsSource": "Sports Club",
+      "CategoryID": "2",
+      "NewsStatus": 1,
+      "CreatedByID": "4",
+      "UpdatedByID": "4",
+      "ModifiedDate": "2024-03-25"
+    },
+    {
+      "id": "4",
+      "NewsTitle": "Internal Research Grants",
+      "Headline": "Faculty and staff can now apply for 2024 research funding",
+      "CreatedDate": "2024-03-15",
+      "NewsContent": "The university announces a new round of funding for innovative research...",
+      "NewsSource": "Academic Affairs",
+      "CategoryID": "1",
+      "NewsStatus": 0,
+      "CreatedByID": "2",
+      "UpdatedByID": "2",
+      "ModifiedDate": "2024-03-18"
+    },
+    {
+      "id": "5",
+      "NewsTitle": "Student Exchange Program in Japan",
+      "Headline": "Experience a semester abroad at our partner university in Tokyo",
+      "CreatedDate": "2024-03-28",
+      "NewsContent": "Applications are open for the Autumn 2024 exchange program...",
+      "NewsSource": "International Office",
+      "CategoryID": "5",
+      "NewsStatus": 1,
+      "CreatedByID": "3",
+      "UpdatedByID": "3",
+      "ModifiedDate": "2024-03-28"
+    },
+    {
+      "id": "6",
+      "NewsTitle": "Campus Renovation Update",
+      "Headline": "New library wing to be completed by May",
+      "CreatedDate": "2024-04-01",
+      "NewsContent": "Construction is on schedule for the new state-of-the-art library facilities...",
+      "NewsSource": "Facilities Management",
+      "CategoryID": "4",
+      "NewsStatus": 1,
+      "CreatedByID": "4",
+      "UpdatedByID": "4",
+      "ModifiedDate": "2024-04-01"
+    },
+    {
+      "id": "8e36",
+      "NewsTitle": "adafafaf",
+      "Headline": "afafafa",
+      "NewsContent": "àafafaf",
+      "NewsSource": "fafafaf",
+      "CategoryID": "",
+      "NewsStatus": 1,
+      "Tags": [
+        "1"
+      ],
+      "CreatedByID": "1",
+      "UpdatedByID": "1",
+      "CreatedDate": "2026-02-04",
+      "ModifiedDate": "2026-02-04"
+    },
+    {
+      "id": "f218",
+      "NewsTitle": "11111",
+      "Headline": "11111",
+      "NewsContent": "1111",
+      "NewsSource": "11111",
+      "CategoryID": "",
+      "NewsStatus": 1,
+      "Tags": [
+        "1"
+      ],
+      "CreatedByID": "1",
+      "UpdatedByID": "1",
+      "CreatedDate": "2026-02-04",
+      "ModifiedDate": "2026-02-04"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "TagName": "Urgent",
+      "Note": "High priority news"
+    },
+    {
+      "id": "2",
+      "TagName": "Event",
+      "Note": "Campus events"
+    },
+    {
+      "id": "3",
+      "TagName": "Workshop",
+      "Note": "Educational workshops"
+    },
+    {
+      "id": "4",
+      "TagName": "Scholarship",
+      "Note": "Financial aid news"
+    },
+    {
+      "id": "5",
+      "TagName": "Sport",
+      "Note": "Sports related news"
+    }
+  ],
+  "newsTags": [
+    {
+      "id": "2",
+      "NewsArticleID": "2",
+      "TagID": "3"
+    },
+    {
+      "id": "3",
+      "NewsArticleID": "3",
+      "TagID": "5"
+    },
+    {
+      "id": "4",
+      "NewsArticleID": "5",
+      "TagID": "4"
+    },
+    {
+      "id": "5",
+      "NewsArticleID": "5",
+      "TagID": "1"
+    },
+    {
+      "id": "d819",
+      "NewsArticleID": "1",
+      "TagID": "2"
+    },
+    {
+      "id": "387b",
+      "NewsArticleID": "1",
+      "TagID": "3"
+    }
+  ]
+}

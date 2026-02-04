@@ -1,0 +1,62 @@
+:root {
+	/* --- Bảng màu FPT University --- */
+	--fpt-orange: #f27123; /* Màu cam chủ đạo */
+	--fpt-orange-hover: #d9621c;
+	--fpt-dark: #1a1a1a; /* Màu đen cho header/footer */
+	--fpt-gray-light: #f4f4f4; /* Màu nền trang */
+	--fpt-text-main: #333333; /* Màu chữ chính */
+	--fpt-text-muted: #6c757d; /* Màu chữ phụ/chú thích */
+
+	/* --- Cấu hình Font chữ --- */
+	--font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+	/* --- Cỡ chữ (Typography Scale) --- */
+	--fs-h1: 2.5rem; /* 40px - Tiêu đề lớn nhất */
+	--fs-h2: 2rem; /* 32px */
+	--fs-h3: 1.75rem; /* 28px */
+	--fs-body: 1rem; /* 16px - Nội dung bài báo */
+	--fs-small: 0.875rem; /* 14px - Ngày tháng, tác giả */
+}
+
+/* Áp dụng cơ bản */
+body {
+	margin: 0;
+	font-family: var(--font-main);
+	background-color: var(--fpt-gray-light);
+	color: var(--fpt-text-main);
+	line-height: 1.6;
+	min-height: 100vh;
+	display: block;
+}
+
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Đảm bảo box-sizing là border-box để padding không làm tăng kích thước phần tử */
+* {
+	box-sizing: border-box;
+}
+
+/* Custom các class Bootstrap để theo tông FPT */
+.btn-primary {
+	background-color: var(--fpt-orange) !important;
+	border-color: var(--fpt-orange) !important;
+}
+
+.btn-primary:hover {
+	background-color: var(--fpt-orange-hover) !important;
+}
+
+.text-fpt-orange {
+	color: var(--fpt-orange) !important;
+}
+
+.bg-fpt-dark {
+	background-color: var(--fpt-dark) !important;
+}

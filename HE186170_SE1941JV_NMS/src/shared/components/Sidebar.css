@@ -1,0 +1,36 @@
+/* Sidebar.css */
+
+.sidebar-container {
+	background-color: var(--fpt-dark);
+	width: 100%;
+	height: 100vh;
+	transition: all 0.3s ease;
+}
+
+.sidebar-link {
+	padding: 12px 15px !important;
+	border-radius: 8px !important;
+	margin-bottom: 5px;
+	transition: all 0.2s ease-in-out;
+	color: #ced4da !important; /* Màu xám nhạt cho chữ */
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.sidebar-link:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	color: #fff !important;
+}
+
+/* Quan trọng: Trạng thái Active */
+.sidebar-link.active {
+	background-color: var(--fpt-orange) !important;
+	color: white !important;
+	font-weight: 600;
+	box-shadow: 0 4px 12px rgba(242, 113, 35, 0.2);
+}
+
+.sidebar-link svg {
+	font-size: 1.2rem;
+}
