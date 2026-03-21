@@ -1,0 +1,9 @@
+# Loại bỏ tất cả các file và thư mục ở thư mục gốc
+/*
+
+# Giữ lại 2 thư mục dự án chính
+!/FUNews_BE/
+!/FUNews_FE/
+
+# Giữ lại chính file .gitignore này
+!.gitignore
